@@ -132,13 +132,13 @@ if __name__ == "__main__":
             if v:
                 if not renew(sessid, s, passwd_list[i], k):
                     print("ServerID: %s Renew Error!" % k)
-                     requests.post(serverCool, data=('EUserv：续期错误').encode('utf-8'))
+                    requests.post(serverCool, data=('EUserv：续期错误').encode('utf-8'))
                 else:
                     print("ServerID: %s has been successfully renewed!" % k)
-                     requests.post(serverCool, data=('EUserv：续期成功').encode('utf-8'))
+                    requests.post(serverCool, data=('EUserv：续期成功').encode('utf-8'))
             else:
                 print("ServerID: %s does not need to be renewed" % k)
-                 requests.post(serverCool, data=('EUserv：不需要续期').encode('utf-8'))
+                requests.post(serverCool, data=('EUserv：不需要续期').encode('utf-8'))
         time.sleep(15)
         check(sessid, s)
         time.sleep(5)
