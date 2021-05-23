@@ -29,4 +29,5 @@ jobs:
         env:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
+          COOL_KEY: ${{ secrets.COOL_KEY }}
         run: python main.py
